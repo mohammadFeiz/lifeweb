@@ -2,6 +2,7 @@ import { FC, useContext } from "react"
 import AppContext from "./context"
 import { AITable } from "aio-input"
 import AIODate from "aio-date"
+import App from "../../App"
 
 const Table: FC = () => {
     const { data } = useContext(AppContext)
@@ -25,14 +26,14 @@ const Table: FC = () => {
                     value: 'row.lead',
                     justify:true,
                     template:({row})=><CellText text={row.lead}/>,
-                    minWidth:200,
+                    minWidth:240,
                 },
                 { 
                     title: 'محتوا', 
                     value: 'row.content',
                     justify:true,
                     template:({row})=><CellText text={row.content}/>,
-                    minWidth:200,
+                    minWidth:240,
                 },
                 { 
                     title: 'تاریخ', 
@@ -55,9 +56,12 @@ export default Table
 
 const CellText:FC<{text:string}> = ({text})=>{
     if(!text){return null}
+    const {modal} = useContext(AppContext)
     return (
-        <div className="h-60- ofy-auto- m-12- brd-c-13- br-6- p-6-">
-            {text}
-        </div>
+        <div 
+            className="h-60- ofy-auto- m-12- brd-c-13- br-6- p-6-" 
+            dangerouslySetInnerHTML={{__html:text}} 
+            onClick={()=>modal.changeText(text)}
+        />
     )
 }

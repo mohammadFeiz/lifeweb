@@ -12,9 +12,11 @@
   "dependencies": {
     "aio-apis": "^8.0.1",
     "aio-date": "^5.0.1",
-    "aio-input": "^14.3.0",
+    "aio-input": "^14.3.3",
+    "aio-popup": "^6.0.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

@@ -21,16 +21,28 @@ function dateResult(rowDate: string, fromDate: string, toDate: string) {
         const res = DATE.compaire(rowDateJalali, toDate);
         if (res === 'greater') { return false }
     }
+    return true
 }
-export function filterResult(allData:I_row[],filter:I_filter) {
-    const filteredData:I_row[] = allData.filter((row: I_row) => {
-        if(!dateResult(row.published_at,filter.fromDate,filter.toDate)){
+export function filterResult(allData: I_row[], filter: I_filter) {
+    const filteredData: I_row[] = allData.filter((row: I_row) => {
+        if (!dateResult(row.published_at, filter.fromDate, filter.toDate)) {
             return false
         }
-        if (!searchResult(row, filter)) { 
-            return false 
+        if (!searchResult(row, filter)) {
+            return false
         }
         return true
     })
-    return filteredData
+    const res = filteredData
+    return res
+}
+export function getDateAttrs(dateArray:number[],filter:I_filter) {
+    const DATE = new AIODate()
+    if(filter.fromDate){
+        if(DATE.compaire(dateArray, filter.fromDate) !== 'greater'){return}
+    }
+    if(filter.toDate){
+        if(DATE.compaire(dateArray, filter.toDate) !== 'less'){return}
+    }
+    return { className: 'date-range' }
 }
