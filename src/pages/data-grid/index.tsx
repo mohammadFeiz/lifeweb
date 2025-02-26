@@ -7,10 +7,12 @@ import Toolbar from "./toolbar";
 import './index.css';
 import useModal from "./use-modal";
 import { useSearchParams } from "react-router-dom";
+import usePopup from "aio-popup";
 
 const DataGrid: FC = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [data, setData] = useState<I_row[]>([])
+    const popup = usePopup()
     const [filter, setFilter] = useState<I_filter>({
         fromDate: searchParams.get('fromDate') || '',
         toDate: searchParams.get('toDate') || '',
@@ -36,6 +38,12 @@ const DataGrid: FC = () => {
             search: ''
         })
     }, [])
+    const openToolbarMobile = ()=>{
+        popup.addModal({
+            position:'right',
+            body:<Toolbar mobile={true}/>
+        })
+    }
     useEffect(() => {
         fetchData({
             fromDate: searchParams.get("fromDate") || "",
@@ -43,13 +51,13 @@ const DataGrid: FC = () => {
             search: searchParams.get("search") || "",
         });
     }, [searchParams]);
-    const modal = useModal()
     return (
-        <AppContext.Provider value={{ filter, changeFilter, data, modal }}>
+        <AppContext.Provider value={{ filter, changeFilter, data, popup,openToolbarMobile }}>
             <div className="bg-d-20- fullscreen- flex-row- of-hidden- p-12- gap-12-">
                 <Toolbar />
                 <Table />
-                {modal.render()}
+                <Table mobile={true}/>
+                {popup.render()}
             </div>
         </AppContext.Provider>
     )

@@ -117,7 +117,7 @@ input {
   }
 }
 
-@media screen and (min-width: undefinedpx) {
+@media screen and (min-width: 1200px) {
   .hide-lg- {
     display: none !important;
   }
@@ -2653,6 +2653,52 @@ input {
 
 .c-d-0- {
   color: rgba(0, 0, 0, .0) !important;
+}
+
+.bg-l-2- {
+  background: rgba(255, 255, 255, .02) !important;
+}
+
+.bg-d-2- {
+  background: rgba(0, 0, 0, .02) !important;
+}
+
+.c-l-2- {
+  color: rgba(255, 255, 255, .02) !important;
+}
+
+.c-d-3- {
+  color: rgba(0, 0, 0, .04) !important;
+}
+.bg-l-3- {
+  background: rgba(255, 255, 255, .03) !important;
+}
+
+.bg-d-3- {
+  background: rgba(0, 0, 0, .03) !important;
+}
+
+.c-l-3- {
+  color: rgba(255, 255, 255, .03) !important;
+}
+
+.c-d-3- {
+  color: rgba(0, 0, 0, .04) !important;
+}
+.bg-l-4- {
+  background: rgba(255, 255, 255, .04) !important;
+}
+
+.bg-d-4- {
+  background: rgba(0, 0, 0, .04) !important;
+}
+
+.c-l-4- {
+  color: rgba(255, 255, 255, .04) !important;
+}
+
+.c-d-4- {
+  color: rgba(0, 0, 0, .04) !important;
 }
 
 .bg-l-5- {

@@ -3,57 +3,24 @@
     padding:12px;
     border-radius:12px;
 }
-.modal{
-    position: fixed;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:100000000;
-    cursor: pointer;
-    
-}
-.modal-header{
-    height:36px;
-    display: flex;
-    align-items: center;
-    padding:0 24px;
-}
-.modal-body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    flex:1;
-    overflow-y:auto;
-}
-.modal-content{
+
+/*table*/
+.aio-input-table{
+    padding:12px;
     background:#fff;
-    border-radius:12px;
-    max-width:480px;
-    max-height:90vh;
-    padding: 12px;
-}
-
-.modal.hidden{
-    display: none;
-}
-.modal.visible{
-    display: flex;
-}
-
-.close{
-    cursor:pointer;
 }
 .aio-input-table-row{
     margin-bottom:8px;
     box-shadow:0 3px 8px 0 rgba(0,0,0,0.1);
 }
+.aio-input-table-toolbar{
+    border-radius:12px;
+    margin-bottom:12px;
+    background:#f8f8f8
+}
+/*table*/
+
+/*date*/
 .aio-input-date-container{
     border:1px solid #eee;
     overflow:hidden;
@@ -68,4 +35,25 @@
 .date-range{
     background:#b5c7db99;
     color:#1682d9;
+}
+/*date*/
+
+/*popup*/
+.aio-popup-header{
+    background: #889eb7;
+    color:#fff;
+}
+.aio-popup{
+    border-radius:12px;
+    overflow: hidden;
+    max-width: 90vw !important;
+}
+.aio-popup-backdrop{
+    background:rgba(0,0,0,0.6)
+}
+/*popup*/
+
+.button-1{
+    background: #889eb7;
+    color:#fff;
 }

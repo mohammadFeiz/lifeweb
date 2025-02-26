@@ -36,13 +36,19 @@ export function filterResult(allData: I_row[], filter: I_filter) {
     const res = filteredData
     return res
 }
-export function getDateAttrs(dateArray:number[],filter:I_filter) {
+export function getDateAttrs(dateArray: number[], filter: I_filter) {
     const DATE = new AIODate()
-    if(filter.fromDate){
-        if(DATE.compaire(dateArray, filter.fromDate) !== 'greater'){return}
+    if (filter.fromDate) {
+        if (DATE.compaire(dateArray, filter.fromDate) !== 'greater') { return }
     }
-    if(filter.toDate){
-        if(DATE.compaire(dateArray, filter.toDate) !== 'less'){return}
+    if (filter.toDate) {
+        if (DATE.compaire(dateArray, filter.toDate) !== 'less') { return }
     }
     return { className: 'date-range' }
+}
+
+export function getDateString(date: string) {
+    const DATE = new AIODate();
+    const jalaliDate = DATE.toJalali(date);
+    return new AIODate().getDateByPattern(jalaliDate, '{weekDay} {day} {monthString} {year}')
 }
