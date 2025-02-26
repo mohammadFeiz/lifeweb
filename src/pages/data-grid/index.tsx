@@ -4,9 +4,9 @@ import Apis from "../../apis";
 import AppContext from "./context";
 import Table from "./table";
 import Toolbar from "./toolbar";
-import './index.css';
 import { useSearchParams } from "react-router-dom";
 import usePopup from "aio-popup";
+import './index.css';
 
 const DataGrid: FC = () => {
     const [searchParams, setSearchParams] = useSearchParams();
