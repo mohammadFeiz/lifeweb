@@ -124,9 +124,7 @@ const TableToolbar: FC<{
                 <button
                     className='bg-d-10- w-36- h-36- brd-none- fs-36- br-8- flex-row- align-vh- pointer-'
                     onClick={openToolbarMobile}
-                >
-                    =
-                </button>
+                >=</button>
             }
             <div className="">{`${data.length} مورد`}</div>
         </div>
