@@ -5,7 +5,6 @@ import AppContext from "./context";
 import Table from "./table";
 import Toolbar from "./toolbar";
 import './index.css';
-import useModal from "./use-modal";
 import { useSearchParams } from "react-router-dom";
 import usePopup from "aio-popup";
 
