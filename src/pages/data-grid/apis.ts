@@ -8,13 +8,17 @@ export default class Apis extends AIOApis {
         super({
             id: 'test',
             lang:'fa',
-            handleErrorMessage: (error) => error.response.message,
+            handleErrorMessage: (error) => {
+                return error.response.data.message.error
+            },
             token: ''
         })
     }
     mock = (filter: I_filter) => {
         const allData: I_row[] = mockData
-        if (Math.random() > 0.4) {
+        const random = Math.random()
+        console.log(random)
+        if (random > 0.4) {
             return {
                 status: 200,
                 data: filterResult(allData,filter)
