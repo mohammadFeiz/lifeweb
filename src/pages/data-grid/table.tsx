@@ -1,7 +1,7 @@
 import { FC, useContext } from "react"
 import AppContext from "./context"
 import { AITable } from "aio-input"
-import { I_row } from "../../types"
+import { I_row } from "./types"
 import { getDateString } from "./utils"
 
 const Table: FC<{ mobile?: boolean }> = ({ mobile }) => {

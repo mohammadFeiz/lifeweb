@@ -1,4 +1,4 @@
-import { I_row } from "./types"
+import { I_row } from "./pages/data-grid/types"
 
 const data:I_row[] = [
     {

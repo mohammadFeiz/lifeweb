@@ -1,5 +1,5 @@
 import AIODate from "aio-date"
-import { I_filter, I_row } from "../../types"
+import { I_filter, I_row } from "./types"
 
 function searchResult(row: I_row, filter: I_filter): boolean {
     if (!filter.search) { return true }

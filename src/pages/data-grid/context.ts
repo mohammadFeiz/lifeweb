@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { I_filter, I_row } from "../../types";
+import { I_filter, I_row } from "./types";
 import { I_usePopup } from "aio-popup";
 type I_AppContext = {
     data: I_row[]

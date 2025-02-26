@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { I_filter, I_row } from "../../types";
+import { I_filter, I_row } from "./types";
 import Apis from "./apis";
 import AppContext from "./context";
 import Table from "./table";

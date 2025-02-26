@@ -1,5 +1,5 @@
 import AIOApis from "aio-apis";
-import { I_filter, I_row } from "../../types";
+import { I_filter, I_row } from "./types";
 import mockData from '../../mock-data';
 import { filterResult } from "./utils";
 

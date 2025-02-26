@@ -1,7 +1,7 @@
 import { AIDate, AIFormInput, AIText } from "aio-input"
 import { FC, useContext, useEffect, useState } from "react"
 import AppContext from "./context"
-import { I_filter } from "../../types"
+import { I_filter } from "./types"
 import { getDateAttrs } from "./utils"
 
 const Toolbar: FC<{mobile?:boolean}> = ({mobile}) => {
