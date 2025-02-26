@@ -17,7 +17,6 @@ export default class Apis extends AIOApis {
     mock = (filter: I_filter) => {
         const allData: I_row[] = mockData
         const random = Math.random()
-        console.log(random)
         if (random > 0.4) {
             return {
                 status: 200,
