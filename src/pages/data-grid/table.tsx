@@ -73,7 +73,10 @@ const CellText: FC<{ text: string }> = ({ text }) => {
                     },
                     position: 'center',
                     body: (
-                        <div className='p-12-' dangerouslySetInnerHTML={{ __html: text }}/>
+                        <div 
+                            className='p-12-' 
+                            dangerouslySetInnerHTML={{ __html: text }}
+                        />
                     )
                 })
             }}
